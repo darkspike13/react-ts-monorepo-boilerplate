@@ -1,0 +1,49 @@
+{
+  "name": "react-ts-monorepo-boilerplate",
+  "version": "1.0.0",
+  "author": "Guillaume <guillaume.assaud@53north.digital>",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "start": "lerna run start --parallel",
+    "build": "lerna run build --parallel",
+    "test": "CI=true lerna run test --parallel",
+    "typecheck": "lerna run typecheck --parallel",
+    "lint": "lerna run lint --parallel",
+    "lint:fix": "lerna run lint:fix --parallel",
+    "start:www": "lerna run start --scope=\"@web/shared\" --scope=\"@web/utils\" --scope=\"@web/www\" --parallel",
+    "build:www": "lerna run build --scope=\"@web/shared\" --scope=\"@web/utils\" --scope=\"@web/www\" --parallel",
+    "test:www": "CI=true lerna run test --scope=\"@web/shared\" --scope=\"@web/utils\" --scope=\"@web/www\" --parallel",
+    "lint:www": "lerna run lint --scope=\"@web/shared\" --scope=\"@web/utils\" --scope=\"@web/www\" --parallel",
+    "lint:fix:www": "lerna run lint:fix --scope=\"@web/shared\" --scope=\"@web/utils\" --scope=\"@web/www\" --parallel",
+    "clean": "lerna clean",
+    "clean:update": "lerna clean && lerna bootstrap"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.1",
+    "@types/node": "^16.11.36",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4",
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.2.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "lerna": "^4.0.0",
+    "prettier": "^2.6.2",
+    "node-sass": "^4.14.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.6.4"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  }
+}

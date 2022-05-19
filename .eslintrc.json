@@ -1,0 +1,37 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "simple-import-sort"
+  ],
+  "extends": ["prettier", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/explicit-member-accessibility": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-unused-vars": 1,
+    "@typescript-eslint/no-submodule-imports": 0,
+    "@typescript-eslint/no-unused-expressions": 1,
+    "@typescript-eslint/no-use-before-define": 0,
+    "@typescript-eslint/jsx-no-lambda": 0,
+    "@typescript-eslint/prefer-interface": 0,
+    "@typescript-eslint/interface-name-prefix": 0,
+    "simple-import-sort/imports": 1,
+    "space-before-function-paren": 0,
+    "no-console": 1,
+    "sort-keys": 0,
+    "sort-imports": 0
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  }
+}
